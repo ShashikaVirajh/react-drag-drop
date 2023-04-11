@@ -1,14 +1,14 @@
 ## Motivation
 
-- This project was developed as a reference project to start working with @rematch/core redux library.
+- This project was developed as a reference project to start working with react-dnd library.
 - Tried to provide a complete example to the developers who wants to easily get used to this amazing library.
-- This covers, integrating rematch to a react project, handling rematch loading and rematch persist.
+- This covers dragging a component, dropping it on the drop zone and ordering the dropped components in the proper order.
 
 ## Installation Guide
 
 ```bash
-git clone https://github.com/ShashikaVirajh/react-rematch-example.git
-cd react-rematch-example
+git clone https://github.com/ShashikaVirajh/react-drag-drop-example.git
+cd react-drag-drop-example
 yarn
 ```
 
@@ -18,19 +18,11 @@ yarn
 yarn start
 ```
 
-NOTE: If the APIs are not working, please add this chrome pluging.
-CORS Unblock (https://chrome.google.com/webstore/detail/cors-unblock/lfhmikememgdcahcdlaciloancbhjino?hl=en)
-
-Sometimes these APIs are not working. It must be due to the free plan of cocktaildb. Make sure to remove this plugging once the testing is done.
-
 ## Tech Stack Used
 
 Typescript - for type safety
-Redux Rematch - as the redux library
-Rematch loading - for the handle api loading status
-Rematch persist - to persist data on store
+React DND - to drag and drop components
 Mui - As the UI library
-Axios - to make API requests
 
 ## Contact Details
 
