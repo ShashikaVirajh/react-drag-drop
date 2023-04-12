@@ -8,7 +8,7 @@ import { TCard } from '../types';
 export const CardContainer: FC = (): JSX.Element => {
   const [cards, setCards] = useState<TCard[]>(movieCardList);
 
-  const moveCard = useCallback((dragIndex: number, hoverIndex: number) => {
+  const memoizedMoveCard = useCallback((dragIndex: number, hoverIndex: number) => {
     setCards((prevCards) =>
       update(prevCards, {
         $splice: [
@@ -21,9 +21,15 @@ export const CardContainer: FC = (): JSX.Element => {
 
   const memoizedRenderCard = useCallback(
     (card: TCard, index: number) => (
-      <MovieCard key={card.id} index={index} id={card.id} text={card.text} moveCard={moveCard} />
+      <MovieCard
+        key={card.id}
+        index={index}
+        id={card.id}
+        text={card.text}
+        moveCard={memoizedMoveCard}
+      />
     ),
-    [moveCard]
+    [memoizedMoveCard]
   );
 
   return (
